@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "149765289220",
+    "firebase_url": "https://supermessageman.firebaseio.com",
+    "project_id": "supermessageman",
+    "storage_bucket": "supermessageman.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:149765289220:android:f2147e535dfe1e7f",
+        "android_client_info": {
+          "package_name": "com.shubhamsharma2412.supermessageman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "149765289220-mhnkvkctl8jnsm1hn88uas6qrvggrk6t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shubhamsharma2412.supermessageman",
+            "certificate_hash": "0a70a716fc8149f326535a84326c902d56320bd2"
+          }
+        },
+        {
+          "client_id": "149765289220-1s3vhgg9ic737lare3vee1cucorohins.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBNyVIsfGjVZ4DTrkMMSjKkUsnQ2gvtJQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "149765289220-1s3vhgg9ic737lare3vee1cucorohins.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
