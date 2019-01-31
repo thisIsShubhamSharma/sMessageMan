@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.telecom.TelecomManager;
+import android.telephony.TelephonyManager;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
@@ -16,6 +18,7 @@ public class FindUserActivity extends AppCompatActivity {
     private RecyclerView.Adapter mUserListAdapter;
     private RecyclerView.LayoutManager mUserListLayoutManager;
 
+    ArrayList<UserObject> contactList;
     ArrayList<UserObject> userList;
 
     @Override
@@ -23,10 +26,20 @@ public class FindUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_user);
 
+        contactList = new ArrayList<>();
         userList = new ArrayList<>();
 
         initializeRecyclerView();
         getContactList();
+    }
+
+    private String getCountryISO(){
+        String iso = null;
+
+        TelephonyManager telephonyManager = (TelephonyManager) getApplicationContext().getSystemService(getApplicationContext().TELEPHONY_SERVICE);
+        if(telephonyManager.getNetworkCountryIso() != null)
+
+        return iso;
     }
 
     private void getContactList(){
@@ -36,7 +49,7 @@ public class FindUserActivity extends AppCompatActivity {
             String phone = phones.getString(phones.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
 
             UserObject mContact = new UserObject(name, phone);
-            userList.add(mContact);
+            contactList.add(mContact);
             mUserListAdapter.notifyDataSetChanged();
         }
     }
