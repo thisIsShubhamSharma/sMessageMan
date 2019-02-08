@@ -26,6 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 public class LoginActivity extends AppCompatActivity {
@@ -101,6 +102,7 @@ public class LoginActivity extends AppCompatActivity {
                                     userMap.put("name", user.getDisplayName());
                                     mUserDB.updateChildren(userMap);
                                 }
+                                userIsLoggedIn();
 
                             }
 
@@ -111,7 +113,6 @@ public class LoginActivity extends AppCompatActivity {
                         });
                     }
                 }
-                    userIsLoggedIn();
             }
         });
     }
